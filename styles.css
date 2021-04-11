@@ -4,8 +4,220 @@
     box-sizing: border-box;
 }
 
+@font-face {
+    font-family: "iransans";
+    src: url("./assets/fonts/FontsFree-Net-ir_sans.ttf")format("truetype");
+}
+
 body,
 html {
     width: 100%;
     height: 100%;
+}
+
+body {
+    font-family: "iransans";
+}
+
+i {
+    color: lightgray;
+    margin-left: 20px;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+}
+
+.login-section {
+    background-color: white;
+    width: 45%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.animation-section {
+    background-color: #52c9e1;
+    width: 55%;
+}
+
+.enter-div {
+    width: 70%;
+    /* background-color: red; */
+    direction: rtl;
+    margin-top: 30px;
+}
+
+.enter {
+    font-size: 12px;
+    /* background-color: red; */
+    color: #0088ea;
+}
+
+.title-div {
+    width: 70%;
+    direction: rtl;
+    margin-top: 80px;
+}
+
+.title {
+    color: black;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.detail-div {
+    width: 70%;
+    direction: rtl;
+    margin-top: 20px;
+}
+
+.detail {
+    color: #9c9c99;
+    font-size: 13px;
+}
+
+.input-div {
+    width: 100%;
+    height: 25px;
+    /* background-color: red; */
+    border-bottom: 2px solid lightgray;
+    display: flex;
+    margin-top: 50px;
+}
+
+.input {
+    width: 100%;
+    direction: rtl;
+    border: none;
+    outline: none;
+}
+
+.input:focus {
+    color: lightgray;
+    font-size: 15px;
+}
+
+.input::placeholder {
+    font-family: "iransans";
+    color: lightgray;
+    font-size: 12px;
+}
+
+.captcha {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    height: 25px;
+    margin-top: 50px;
+}
+
+.captcha-code {
+    width: 30%;
+    height: 25px;
+    /* background-color: red; */
+    font-weight: bold;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.captcha-code p i {
+    margin-left: 10px;
+}
+
+button {
+    width: 100%;
+    margin-top: 60px;
+    border: none;
+    outline: none;
+    background-color: #0088ea;
+    border-radius: 3px;
+    height: 25px;
+    color: white;
+    font-family: "iransans";
+    font-size: 10px;
+    cursor: pointer;
+    vertical-align: center;
+}
+
+.remember {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    font-size: 10px;
+    color: gray;
+    cursor: pointer;
+    /* background-color: red; */
+    margin-top: 60px;
+    margin-bottom: 30px;
+}
+
+label {
+    margin-right: 5px;
+}
+
+.remember input,
+label {
+    cursor: pointer;
+}
+
+.remember input {
+    filter: grayscale(100%);
+    width: 10px;
+    height: 10px;
+}
+
+.div-input {
+    width: 70%;
+    margin: 0;
+}
+
+@media screen and (max-width: 830px) {
+    .captcha-code {
+        width: 40%;
+    }
+    .div-input {
+        width: 60%;
+    }
+}
+
+@media screen and (max-width: 1365px) {
+    body,
+    html {
+        height: auto;
+    }
+    .container {
+        height: auto;
+    }
+}
+
+@media screen and (max-width: 630px) {
+    .container {
+        display: flex;
+        flex-direction: column;
+        /* justify-content: center; */
+    }
+    .login-section,
+    .animation-section {
+        height: auto;
+        width: 100%;
+    }
+    .animation-section {
+        height: 1000px;
+    }
 }
