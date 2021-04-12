@@ -13,6 +13,7 @@ body,
 html {
     width: 100%;
     height: 100%;
+    overflow-y: hidden;
 }
 
 body {
@@ -41,14 +42,43 @@ a:hover {
 .login-section {
     background-color: white;
     width: 45%;
+    height: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
+    overflow: hidden;
+    z-index: 1;
 }
 
 .animation-section {
     background-color: #52c9e1;
     width: 55%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.logo {
+    width: 100px;
+    height: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+}
+
+.logo img {
+    width: 70px;
+    height: 70px;
+}
+
+.logo p {
+    color: white;
+    font-size: 12px;
+    margin-top: 10px;
 }
 
 .enter-div {
@@ -132,7 +162,7 @@ a:hover {
     padding: 0;
     display: flex;
     align-items: center;
-    justify-content: flex-end;
+    justify-content: flex-start;
 }
 
 .captcha-code p i {
@@ -158,7 +188,7 @@ button {
     width: 100%;
     display: flex;
     align-items: center;
-    justify-content: flex-start;
+    justify-content: flex-end;
     font-size: 10px;
     color: gray;
     cursor: pointer;
@@ -196,17 +226,36 @@ label {
     }
 }
 
-@media screen and (max-width: 1365px) {
+@media screen and (max-width: 1330px) {
     body,
     html {
         height: auto;
+        overflow: visible;
     }
     .container {
         height: auto;
     }
+    .animation-section {
+        height: 600px;
+        overflow-y: hidden;
+    }
+}
+
+.clock {
+    /* background-color: red; */
+    position: absolute;
+    width: 100%;
+    height: inherit;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    overflow: hidden;
 }
 
 @media screen and (max-width: 630px) {
+    body {
+        overflow-x: hidden;
+    }
     .container {
         display: flex;
         flex-direction: column;
@@ -216,8 +265,87 @@ label {
     .animation-section {
         height: auto;
         width: 100%;
+        /* overflow: hidden; */
     }
     .animation-section {
-        height: 1000px;
+        height: 450px;
+    }
+    .clock {
+        width: 180%;
+    }
+}
+
+@media screen and (max-width: 1080px) {
+    .animation-section {
+        height: 620px;
+    }
+}
+
+.circle {
+    border-radius: 50%;
+    width: 0px;
+    height: 0px;
+    background-color: #aedbe288;
+    position: absolute;
+    border: 2px solid rgba(211, 211, 211, 0.678);
+}
+
+.circle1 {
+    animation: grow 4s linear infinite;
+}
+
+.circle2 {
+    animation: grow 4s linear infinite .4s;
+}
+
+.circle3 {
+    animation: grow 4s linear infinite 0.8s;
+}
+
+.circle4 {
+    animation: grow 4s linear infinite 1.2s;
+}
+
+.circle5 {
+    animation: grow 4s linear infinite 1.6s;
+}
+
+.circle6 {
+    animation: grow 4s linear infinite 2s;
+}
+
+@keyframes grow {
+    0% {
+        width: 0;
+        height: 0;
+        opacity: 1;
+    }
+    100% {
+        width: 600px;
+        height: 600px;
+        opacity: 0;
+    }
+}
+
+.clock div {
+    clip-path: polygon(0 50%, 100% 100%, 100% 0);
+    width: 50%;
+    height: 400px;
+    /* background-color: #8cebea31; */
+    background: linear-gradient(to bottom, #8cebea, #8cebeace, transparent, transparent, transparent);
+    /* margin-top: 100px; */
+    /* top: 10px; */
+    /* position: absolute; */
+    animation: rotate 9s linear infinite;
+    transform-origin: center left;
+    transform-box: fill-box;
+}
+
+@keyframes rotate {
+    form {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
     }
 }
