@@ -234,10 +234,14 @@ label {
     }
     .container {
         height: auto;
+        /* background-color: red; */
     }
     .animation-section {
         height: 600px;
         overflow-y: hidden;
+    }
+    body {
+        height: auto;
     }
 }
 
@@ -271,7 +275,7 @@ label {
         height: 450px;
     }
     .clock {
-        width: 180%;
+        width: 220%;
     }
 }
 
