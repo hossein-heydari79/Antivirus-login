@@ -217,73 +217,23 @@ label {
     margin: 0;
 }
 
-@media screen and (max-width: 830px) {
-    .captcha-code {
-        width: 40%;
-    }
-    .div-input {
-        width: 60%;
-    }
-}
-
-@media screen and (max-width: 1330px) {
-    body,
-    html {
-        height: auto;
-        overflow: visible;
-    }
-    .container {
-        height: auto;
-        /* background-color: red; */
-    }
-    .animation-section {
-        height: 600px;
-        overflow-y: hidden;
-    }
-    body {
-        height: auto;
-    }
-}
-
 .clock {
     /* background-color: red; */
     position: absolute;
     width: 100%;
-    height: inherit;
+    height: 100%;
     display: flex;
     justify-content: flex-end;
     align-items: center;
     overflow: hidden;
 }
 
-@media screen and (max-width: 630px) {
-    body {
-        overflow-x: hidden;
-    }
-    .container {
-        display: flex;
-        flex-direction: column;
-        /* justify-content: center; */
-    }
-    .login-section,
-    .animation-section {
-        height: auto;
-        width: 100%;
-        /* overflow: hidden; */
-    }
-    .animation-section {
-        height: 450px;
-    }
-    .clock {
-        width: 220%;
-    }
-}
 
-@media screen and (max-width: 1080px) {
+/* @media screen and (max-width: 1080px) {
     .animation-section {
         height: 620px;
     }
-}
+} */
 
 .circle {
     border-radius: 50%;
@@ -334,9 +284,10 @@ label {
 .clock div {
     clip-path: polygon(0 50%, 100% 100%, 100% 0);
     width: 50%;
-    height: 400px;
+    height: 700px;
     /* background-color: #8cebea31; */
     background: linear-gradient(to bottom, #8cebea, #8cebeace, transparent, transparent, transparent);
+    /* background-color: red; */
     /* margin-top: 100px; */
     /* top: 10px; */
     /* position: absolute; */
@@ -351,5 +302,68 @@ label {
     }
     to {
         transform: rotate(360deg);
+    }
+}
+
+@media screen and (max-width: 1330px) {
+    body,
+    html {
+        height: auto;
+        overflow: visible;
+    }
+    .container {
+        height: 700px;
+        /* background-color: red; */
+    }
+    .animation-section {
+        height: inherit;
+        overflow-y: hidden;
+        overflow-x: hidden;
+    }
+    body {
+        height: auto;
+    }
+    .animation-section,
+    .login-section {
+        height: 100%;
+    }
+    .clock {
+        height: 700px;
+    }
+}
+
+@media screen and (max-width: 830px) {
+    .captcha-code {
+        width: 40%;
+    }
+    .div-input {
+        width: 60%;
+    }
+}
+
+@media screen and (max-width: 630px) {
+    body {
+        overflow-x: hidden;
+    }
+    .container {
+        display: flex;
+        flex-direction: column;
+        height: inherit;
+        /* justify-content: center; */
+    }
+    .login-section,
+    .animation-section {
+        height: auto;
+        width: 100%;
+        /* overflow: hidden; */
+    }
+    .animation-section {
+        height: 450px;
+        overflow-x: hidden;
+        position: relative;
+    }
+    .clock {
+        width: 220%;
+        height: inherit;
     }
 }
